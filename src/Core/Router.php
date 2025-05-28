@@ -27,7 +27,7 @@ class Router
      */
     public function init()
     {
-        $currentPath = $_SERVER['PATH_INFO'];
+        $currentPath = $_SERVER['PATH_INFO'] ?? "";
         foreach ($this->routes as $path => $controller) {
             //On utilise un trim pour retirer les "/" du début et de la fin des chemin pour faire que ça match qu'on ait un slash final ou non
             if (trim($currentPath, "/") == trim($path, "/")) {
