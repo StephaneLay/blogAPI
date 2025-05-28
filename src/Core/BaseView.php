@@ -2,6 +2,9 @@
 
 namespace App\Core;
 
+use App\View\Parts\Footer;
+use App\View\Parts\Header;
+
 /**
  * Classe parent dont toutes les Views devront hériter, c'est dans son render qu'on peut
  * indiquer la structure HTML qui sera partagée par toutes nos pages/vues
@@ -24,11 +27,13 @@ class BaseView {
      * @return void
      */
     public function render(): void {
+        $header = new Header();
+        $footer = new Footer();
         
-        echo "<header>Mon Menu et mon header</header>";
-
+        $header->render();
+        
         $this->content();
         
-        echo "<footer>Mon footer</footer>";
+        $footer->render();
     }
 }
