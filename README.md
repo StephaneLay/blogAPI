@@ -31,3 +31,51 @@ DB_NAME=hb_first
 
 ## Explications du MVC
 L'idée générale est d'avoir une bonne séparation entre les principes de l'application : le modèle pour les données et leur manipulation, la vue pour l'affichage et le contrôleur pour traiter les requêtes et orchestrer les deux autres.
+
+
+```plantuml
+
+@startuml
+
+
+actor client
+
+folder serveur {
+    
+    node "Appli PHP" {
+    
+        file Router
+        file Routes
+        
+        package Controller {
+            file MonController
+        }
+        
+        package View {
+            file DisplayHTMLView
+        }
+        
+        package Repository {
+            file EntityRepository
+            file Database
+        }
+        package Entity {
+            file EntityClass
+        }
+    }
+    
+    database MySQL 
+
+}
+
+client "Requête HTTP GET"--> Router
+Router --> Routes
+Router --> MonController
+MonController --> EntityRepository
+MonController --> DisplayHTMLView
+EntityRepository --> Database
+Repository --> MySQL
+@enduml
+```
+
+Un client fait une requête HTTP vers le serveur
