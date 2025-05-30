@@ -34,7 +34,12 @@ class Router
                 $controller->processRequest();
                 return;
             }
-        }
+        }   
+        //Si aucune des routes match avec le current path, on affiche une erreur 404
+        $errorView = new ErrorView("Page not found : there is no route for $currentPath");
+        $errorView->render();
+        //Pas obligatoire, mais plus standard, changer le status de la réponse HTTP pour un 404
+        http_response_code(404);
 
     }
 }

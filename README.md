@@ -27,3 +27,7 @@ DB_NAME=hb_first
 3. On vient modifier le fichier `src/Routes.php` pour rajouter dans le tableau de routes un nouveau chemin qu'on lie à une instance du contrôleur qu'on a fait à l'étape 1
 4. Dans le contrôleur, on redéfinit la méthode doGet et/ou doPost (selon si ce formulaire ne fait que de l'affichage ou que du traitement de formulaire ou les deux) et on lui fait return une instance de la View qu'on a créée
 5. Si notre View a besoin de data, on les met en propriétés de la classe et on fait en sorte de pouvoir les fournir via le constructeur. Côté contrôleur, au moment d'instancier, on récupère les données nécessaire d'une manière ou d'une autre (un appel à un repository par exemple) et on les donne à notre View
+
+
+## Explications du MVC
+L'idée générale est d'avoir une bonne séparation entre les principes de l'application : le modèle pour les données et leur manipulation, la vue pour l'affichage et le contrôleur pour traiter les requêtes et orchestrer les deux autres.
