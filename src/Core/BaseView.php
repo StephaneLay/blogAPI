@@ -2,8 +2,8 @@
 
 namespace App\Core;
 
-use App\View\Parts\Footer;
-use App\View\Parts\Header;
+use App\View\Part\Footer;
+use App\View\Part\Header;
 
 /**
  * Classe parent dont toutes les Views devront hériter, c'est dans son render qu'on peut

@@ -2,6 +2,8 @@
 
 namespace App\Core;
 
+use App\View\ErrorView;
+
 /**
  * Classe qui va se charger de faire le routing, c'est à dire de dispatcher les requêtes
  * HTTP vers le bon contrôleur selon ce qu'il y a dans l'url.
