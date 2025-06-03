@@ -31,7 +31,7 @@ DB_NAME=hb_first
 #### Classes utilitaires
 * [App\View\RedirectView](src/View/RedirectView.php) : Permet de faire une redirection vers une autre page depuis le contrôleur lorsqu'on le return, il attend en argument d'instance le lien vers lequel redirigé
 * [App\View\ErrorView](src/View/ErrorView.php) : Une page d'erreur standard qui permettra d'afficher des erreurs à l'utilisateur⋅ice (les 404 par exemple)
-* [App\View\Part\Header](src/View/Part/Header.php) et [App\View\Part\Footer](src/View/Part/Footer.php) : Sont utilisées par la BaseView pour afficher un header et un footer commun à toutes les pages, elles contiennent également l'ouverture et la fermeture des balises HTML (c'est dans le header qu'on viendra charger des styles par exemple)
+* [App\View\Part\Header](src/View/Part/Header.php) et [App\View\Part\Footer](src/View/Part/Footer.php) : Sont utilisées par la BaseView pour afficher un header et un footer commun à toutes les pages, elles contiennent également l'ouverture et la fermeture des balises HTML (c'est dans le header qu'on viendra charger des styles par exemple). À noter que le Header possède une variable static `Header::$pageTitle` servant à modifier le titre et pouvant être redéfinie depuis les contrôleurs ou ailleurs.
 
 #### Notes
 * Si une View a besoin de données à afficher, on lui met en propriété private avec un constructeur pour les assigner. C'est le contrôleur qui récupérera les données et les donnera à la vue.

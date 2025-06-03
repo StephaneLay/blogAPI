@@ -1,7 +1,10 @@
 <?php
 
 namespace App\View\Part;
-
+/**
+ * Classe utilisée par le BaseView afin d'afficher le footer de la page et la fermeture
+ * des balises HTML.
+ */
 class Footer
 {
 
