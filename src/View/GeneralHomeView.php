@@ -11,6 +11,8 @@ class GeneralHomeView extends BaseView{
         <h1>Le plus beau de tous les blogs php</h1>
         <p>Ceci est un magnifique blog php pour s'entrainer</p>
         <a href="/sign-in">Sign in</a>
+
         <?php
+        var_dump($_SESSION["user"]);
     }
 }

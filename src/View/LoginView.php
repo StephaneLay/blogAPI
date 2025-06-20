@@ -10,7 +10,7 @@ class LoginView extends BaseView
     {
         ?>
 
-        <form action="/profile" >
+        <form >
             <label for="email">Enter your email</label>
             <input type="email" name="email" id="email">
 
