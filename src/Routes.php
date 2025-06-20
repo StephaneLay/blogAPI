@@ -3,6 +3,9 @@
 namespace App;
 
 use App\Controller\ExampleController;
+use App\Controller\HomeController;
+use App\Controller\LoginController;
+use App\Controller\SignInController;
 
 
 /**
@@ -19,7 +22,9 @@ class Routes
     public static function defineRoutes()
     {
         return [
-            "/example" => new ExampleController(),
+            "/" => new HomeController,
+            "/sign-in" => new SignInController(),
+            "/login" => new LoginController()
             
         ];
     }

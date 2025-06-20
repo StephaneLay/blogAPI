@@ -31,7 +31,7 @@ class Header
         </head>
 
         <body>
-            <header>Mon header</header>
+            <header><a href="/login">Log in</a></header>
             <?php
     }
 }
